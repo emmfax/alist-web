@@ -89,7 +89,7 @@ export const Obj = () => {
               setPassword={setPassword}
               enterCallback={() => refresh(true)}
             >
-            <Text>{t("要不你猜一猜")}</Text>
+              <Text>{t("要不你猜一猜")}</Text>
             </Password>
           </Match>
           <Match

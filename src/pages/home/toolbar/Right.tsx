@@ -29,17 +29,17 @@ export const Right = () => {
   const { refresh } = usePath()
   const { toggleColorMode } = useColorMode()
   const icon = useColorModeValue(
-      {
-        size: "$8",
-        component: Moon,
-        p: "$0_5",
-      },
-      {
-        size: "$8",
-        component: Sun,
-        p: "$0_5",
-      }
-   );
+    {
+      size: "$8",
+      component: Moon,
+      p: "$0_5",
+    },
+    {
+      size: "$8",
+      component: Sun,
+      p: "$0_5",
+    },
+  )
   return (
     <Box
       class="left-toolbar-box"
@@ -81,7 +81,7 @@ export const Right = () => {
                 as={RiSystemRefreshLine}
                 tips="refresh"
                 onClick={() => {
-                  refresh(undefined, true);
+                  refresh(undefined, true)
                 }}
               />
               <RightIcon
@@ -128,7 +128,7 @@ export const Right = () => {
                   bus.emit("tool", "upload")
                 }}
               />
-               <RightIcon
+              <RightIcon
                 as={icon().component}
                 tips="toggle_theme"
                 onClick={() => toggleColorMode()}

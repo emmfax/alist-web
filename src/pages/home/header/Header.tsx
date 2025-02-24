@@ -78,10 +78,10 @@ export const Header = () => {
                 // 自带的搜索原本只能显示两个图标下面的换成了三个
                 // icon={
                 //   <Show when={layout() === "list"} fallback={<TbListSearch />}>
-                //     <AiOutlineFileSearch /> 
+                //     <AiOutlineFileSearch />
                 //   </Show>
                 // }
-                
+
                 //这次支持三个不同的图标了
                 icon={
                   <Switch>
