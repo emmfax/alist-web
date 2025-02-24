@@ -89,16 +89,7 @@ export const Obj = () => {
               setPassword={setPassword}
               enterCallback={() => refresh(true)}
             >
-              <Text>{t("global.have_account")}</Text>
-              <Text
-                color="$info9"
-                as={LinkWithBase}
-                href={`/@login?redirect=${encodeURIComponent(
-                  location.pathname,
-                )}`}
-              >
-                {t("global.go_login")}
-              </Text>
+            <Text>{t("要不你猜一猜")}</Text>
             </Password>
           </Match>
           <Match

@@ -34,7 +34,7 @@ const Header = () => {
     handleResp(await logOutReq(), () => {
       changeToken()
       notify.success(t("manage.logout_success"))
-      to(`/@login?redirect=${encodeURIComponent(location.pathname)}`)
+      to(`/@miaol?redirect=${encodeURIComponent(location.pathname)}`)
     })
   }
   return (
@@ -65,7 +65,7 @@ const Header = () => {
             color="$info9"
             cursor="pointer"
             onClick={() => {
-              to("/@manage")
+              to("/@adminplus")
             }}
           >
             {t("manage.title")}
@@ -90,7 +90,7 @@ const Header = () => {
             <SideMenu items={side_menu_items} />
             <Center>
               <HStack spacing="$4" p="$2" color="$neutral11">
-                <SwitchLanguageWhite />
+                {/* <SwitchLanguageWhite /> */}
                 <SwitchColorMode />
               </HStack>
             </Center>

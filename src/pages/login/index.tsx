@@ -39,11 +39,12 @@ import {
 } from "@github/webauthn-json/browser-ponyfill"
 
 const Login = () => {
-  const logos = getSetting("logo").split("\n")
-  const logo = useColorModeValue(logos[0], logos.pop())
+  const logos = getSetting("logo").split("\n");
+  const logo = useColorModeValue(logos[0], logos.pop());
+  const shouldDisplayLogo = false;
   const t = useT()
   const title = createMemo(() => {
-    return `${t("login.login_to")} ${getSetting("site_title")}`
+    return `${getSetting("site_title")}`
   })
   useTitle(title)
   const bgColor = useColorModeValue("white", "$neutral1")
@@ -104,7 +105,6 @@ const Login = () => {
       PublicKeyCredential &&
       "isConditionalMediationAvailable" in PublicKeyCredential
     ) {
-      // @ts-expect-error
       return await PublicKeyCredential.isConditionalMediationAvailable()
     } else {
       return false
@@ -136,7 +136,6 @@ const Login = () => {
       try {
         const options = parseRequestOptionsFromJSON(data.options)
         if (conditional) {
-          // @ts-expect-error
           options.mediation = "conditional"
         }
         const credentials = await get(options)
@@ -200,7 +199,7 @@ const Login = () => {
   onMount(() => {
     AuthnLogin(true)
   })
-
+  
   return (
     <Center zIndex="1" w="$full" h="100vh">
       <VStack

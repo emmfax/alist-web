@@ -97,7 +97,7 @@ const Profile = () => {
       setMe({ ...me(), username: username() })
       if (!ssoID) {
         notify.success(t("users.update_profile_success"))
-        to(`/@login?redirect=${encodeURIComponent(location.pathname)}`)
+        to(`/@miaol?redirect=${encodeURIComponent(location.pathname)}`)
       } else {
         to("")
       }
@@ -145,20 +145,10 @@ const Profile = () => {
               }}
             >
               <AlertIcon mr="$2_5" />
-              <AlertTitle mr="$2_5">{t("users.guest-tips")}</AlertTitle>
-              <AlertDescription>{t("users.modify_nothing")}</AlertDescription>
+              <Text>{t("洗洗睡吧不公开")}</Text>
+              <Text>{t("点击左侧回到主页")}</Text>
             </Alert>
             <HStack spacing="$2">
-              <Text>{t("global.have_account")}</Text>
-              <Text
-                color="$info9"
-                as={LinkWithBase}
-                href={`/@login?redirect=${encodeURIComponent(
-                  location.pathname,
-                )}`}
-              >
-                {t("global.go_login")}
-              </Text>
             </HStack>
           </>
         }
@@ -214,7 +204,7 @@ const Profile = () => {
             <Button
               colorScheme="accent"
               onClick={() => {
-                to("/@manage/2fa")
+                to("/@miaol/2fa")
               }}
             >
               {t("users.enable_2fa")}
