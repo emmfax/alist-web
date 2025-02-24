@@ -39,9 +39,9 @@ import {
 } from "@github/webauthn-json/browser-ponyfill"
 
 const Login = () => {
-  const logos = getSetting("logo").split("\n");
-  const logo = useColorModeValue(logos[0], logos.pop());
-  const shouldDisplayLogo = false;
+  const logos = getSetting("logo").split("\n")
+  const logo = useColorModeValue(logos[0], logos.pop())
+  const shouldDisplayLogo = false
   const t = useT()
   const title = createMemo(() => {
     return `${getSetting("site_title")}`
@@ -199,7 +199,7 @@ const Login = () => {
   onMount(() => {
     AuthnLogin(true)
   })
-  
+
   return (
     <Center zIndex="1" w="$full" h="100vh">
       <VStack

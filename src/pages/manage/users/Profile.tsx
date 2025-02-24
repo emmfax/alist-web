@@ -148,8 +148,7 @@ const Profile = () => {
               <Text>{t("洗洗睡吧不公开")}</Text>
               <Text>{t("点击左侧回到主页")}</Text>
             </Alert>
-            <HStack spacing="$2">
-            </HStack>
+            <HStack spacing="$2"></HStack>
           </>
         }
       >
